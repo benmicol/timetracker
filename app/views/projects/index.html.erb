@@ -1,0 +1,20 @@
+<div class="col-md-12">
+	<% @projects.each do |project| %>
+		<h3>
+			<%= project.name %>
+			<small><%= project.client %></small>
+			<div class="pull-right">
+				<%= link_to edit_project_path(project), class: "icon-link" do %>
+					<small><i class="glyphicon glyphicon-cog"></i></small>
+				<% end %>
+				<%= link_to entry_project_path(project), class: "icon-link" do %>
+					<small><i class="glyphicon glyphicon-plus-sign"></i></small>
+				<% end %>
+			</div>
+		</h3>
+
+		<ul class="list-group">r
+			<li class="list-group-item">No entries yet!</li>
+		</ul>
+	<% end %>
+</div>
